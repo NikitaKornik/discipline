@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import s from "./App.module.scss";
+import AddDiscipline from "./components/AddDiscipline/AddDiscipline";
+import AddDisciplineOptions from "./components/AddDisciplineOptions/AddDisciplineOptions";
+import Layout from "./components/Layout/Layout";
+import Btn from "./components/UiKit/Btn/Btn";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.root}>
+      <Layout>
+        <Btn>Добавить</Btn>
+        <Btn isDisabled>Добавить</Btn>
+        <AddDiscipline />
+        <AddDisciplineOptions />
+      </Layout>
     </div>
   );
 }
